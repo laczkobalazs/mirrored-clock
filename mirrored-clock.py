@@ -16,7 +16,6 @@ So there is no 00:20, instead it is 12:20.
 There is no 13:20, instead it is 01:20.
 Please don’t use Bash. 
 """
-
 def mirrored_clock(time_from_mirror):
     time_parts = time_from_mirror.split(":")    # Assuming the input time is a string (as it is expected in the output) it is split into 2 parts divided by the ":"
     hours = time_parts[0]
@@ -28,4 +27,13 @@ def mirrored_clock(time_from_mirror):
     else:
         real_hours = str(11 - int(hours))
         real_mins = str(60 - int(mins))
+    print(f"{real_hours}:{real_mins}")
     return f"{real_hours}:{real_mins}"
+
+mirrored_clock("02:21")
+mirrored_clock("01:00")
+mirrored_clock("11:44")
+mirrored_clock("14:59")
+mirrored_clock("04:63")
+mirrored_clock("12:00")
+mirrored_clock("12:59")
