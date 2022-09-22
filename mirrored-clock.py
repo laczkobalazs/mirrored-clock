@@ -18,11 +18,11 @@ Please don’t use Bash.
 """
 
 def mirrored_clock(time_from_mirror):
-    time_parts = time_from_mirror.split(":") # Assuming the input time is a string (as it is expected in the output) it is split into 2 parts divided by the ":"
+    time_parts = time_from_mirror.split(":")    # Assuming the input time is a string (as it is expected in the output) it is split into 2 parts divided by the ":"
     hours = time_parts[0]
     mins = time_parts[1]
 
-    if mins == "00": 
+    if mins == "00":                            # An edge case the the clock shows exact hours
         real_hours = str(12 - int(hours))
         real_mins = mins
     else:
