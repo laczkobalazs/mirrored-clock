@@ -22,13 +22,13 @@ def mirrored_clock(time_from_mirror):
     mins = time_parts[1]
 
     if mins == "00":                            # An edge case the the clock shows exact hours
-        real_hours = str(12 - int(hours))
-        real_mins = mins
+        real_hours = 12 - int(hours)
+        real_mins = int(mins)
     else:
-        real_hours = str(11 - int(hours))
-        real_mins = str(60 - int(mins))
-    print(f"{real_hours:02}:{real_mins:02}")
-    return f"{real_hours:02}:{real_mins:02}"
+        real_hours = 11 - int(hours)
+        real_mins = 60 - int(mins)
+    print(f"{real_hours:02d}:{real_mins:02d}")
+    return f"{real_hours:02d}:{real_mins:02d}"
 
 def main():
     mirrored_clock("02:21") # The real time should be 09:39
