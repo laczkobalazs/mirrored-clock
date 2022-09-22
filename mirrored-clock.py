@@ -27,8 +27,8 @@ def mirrored_clock(time_from_mirror):
     else:
         real_hours = str(11 - int(hours))
         real_mins = str(60 - int(mins))
-    print(f"{real_hours}:{real_mins}")
-    return f"{real_hours}:{real_mins}"
+    print(f"{real_hours:02}:{real_mins:02}")
+    return f"{real_hours:02}:{real_mins:02}"
 
 def main():
     mirrored_clock("02:21") # The real time should be 09:39
