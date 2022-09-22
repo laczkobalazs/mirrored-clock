@@ -18,4 +18,7 @@ Please don’t use Bash.
 """
 
 def mirrored_clock(time_from_mirror):
+    time_parts = time_from_mirror.split(":")
+    hours = time_parts[0]
+    mins = time_parts[1]
     return ""
