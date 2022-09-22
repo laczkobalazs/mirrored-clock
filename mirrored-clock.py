@@ -27,6 +27,8 @@ def mirrored_clock(time_from_mirror):
     else:
         real_hours = 11 - int(hours)
         real_mins = 60 - int(mins)
+    if real_hours <= 0:
+        real_hours += 12
     print(f"{real_hours:02d}:{real_mins:02d}")
     return f"{real_hours:02d}:{real_mins:02d}"
 
