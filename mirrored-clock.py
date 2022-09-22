@@ -31,13 +31,13 @@ def mirrored_clock(time_from_mirror):
     return f"{real_hours}:{real_mins}"
 
 def main():
-    mirrored_clock("02:21")
-    mirrored_clock("01:00")
-    mirrored_clock("11:44")
-    mirrored_clock("14:59")
-    mirrored_clock("04:63")
-    mirrored_clock("12:00")
-    mirrored_clock("12:59")
-    
+    mirrored_clock("02:21") # The real time should be 09:39
+    mirrored_clock("01:00") # The real time should be 11:00
+    mirrored_clock("04:03") # The real time should be 07:57
+    mirrored_clock("10:59") # The real time should be 01:01
+    mirrored_clock("11:44") # The real time should be 12:26
+    mirrored_clock("12:00") # The real time should be 12:00
+    mirrored_clock("12:59") # The real time should be 11:01
+
 if __name__ == '__main__':
     main()
