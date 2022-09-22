@@ -28,4 +28,4 @@ def mirrored_clock(time_from_mirror):
     else:
         real_hours = str(11 - int(hours))
         real_mins = str(60 - int(mins))
-    return ""
+    return f"{real_hours}:{real_mins}"
