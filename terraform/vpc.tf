@@ -7,11 +7,26 @@ resource "aws_vpc" "main" {
   }
 }
 
-resource "aws_subnet" "main" {
+resource "aws_subnet" "public" {
+  count = 2
+  Name = element(var.public_subnet_name, count.index)
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.1.0/24"
+  cidr_block = element(var.public_subnet_cidr, count.index)
 
   tags = {
     Name = "Main"
+    type = "public"
+  }
+}
+
+resource "aws_subnet" "private" {
+  count = 2
+  Name = element(var.private_subnet_name, count.index)
+  vpc_id     = aws_vpc.main.id
+  cidr_block = element(var.private_subnet_cidr, count.index)
+
+  tags = {
+    Name = "Main"
+    type = "private"
   }
 }
